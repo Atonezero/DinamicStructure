@@ -33,13 +33,11 @@ class LinkedList:
             raise ValueError("Lista vuota")
         if self.head.valore == valore:
             self.head = self.head.next
-            return
         prev = self.head
         curr = self.head.next
         while curr:
             if curr.valore == valore:
                 prev.next = curr.next
-                return
             prev = curr
             curr = curr.next
         raise ValueError("Valore non trovato")
